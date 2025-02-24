@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NetApp Org Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            max-width: 2000px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        h1 {
+            color: #1a1a1a;
+            margin: 0 0 30px 0;
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>NetApp Org Chart</h1>
+    <div class="chart-container">
+        <div class="mermaid">
+            flowchart LR
+            %% CEO and Direct Reports
+            CEO["George Kurian<br>CEO"]
+            DH["David Hitz<br>Executive VP and Founder"]
+            BO["Beth O'Callahan<br>EVP, CLO and Corporate Secretary"]
+            MB["Mike Berry<br>Executive Vice President, Financial Officer"]
+            CC["Cesar Cernuda<br>President"]
+            HB["Harv Bhela<br>Executive Vice President & Chief Product Officer"]
+            HS["Haiyan Song<br>Executive Vice President, Operations"]
+            SSu["Shankar Subramaniam<br>SVP, Business Operations, Office of the CEO"]
+            GS["Gus Shahin<br>EVP, Business Technology & Operations"]
+            KV["Krish Vitaldevara<br>SVP Product, Platform"]
+
+            %% Harv's Direct Reports
+            JB["Jeff Baxter<br>VP, Product Marketing"]
+            SB["Stacy Bolt<br>Executive Assistant"]
+            RS["Rob Stanton<br>Chief of Staff"]
+            GG["Gagan Gulati<br>SVP/GM, Data Services"]
+            SSi["Sandeep Singh<br>SVP/GM Enterprise Storage"]
+            PT["Pravjit Tiwana<br>SVP/GM Cloud Storage"]
+
+            %% Krish's Direct Reports
+            HW["Heather Weber<br>Executive Assistant"]
+            JW["Jennifer Wang<br>Chief of Staff, Shared Platform"]
+            PE["Pranoop Erasani<br>Vice President,<br>ONTAP Engineering"]
+            BF["Biren Fondekar<br>VP, Head of<br>Customer Experience Office"]
+            AB["Arindam Banerjee<br>Technical Fellow and VP"]
+            AN["Amrita Naik<br>Director, Release Operations"]
+            JK["James Kwon<br>Sr Director, Product Mgmt"]
+            VR["Vasanthi Ramesh<br>VP, Engineering"]
+            PI["Priya Isquith<br>VP, Engineering ONTAP"]
+
+            %% Biren's Team
+            MM["Marty Mayer<br>Sr Director, Product<br>Management"]
+            RA["Ross Ackerman<br>Sr Director of<br>Customer Experience"]
+            MM2["Manjunatha Mittha<br>Director, Engr<br>Programs"]
+            JD["Jason Danielson<br>Business Intelligence<br>Analyst"]
+            CD["Christina Dodge<br>Executive Assistant to<br>Chief Transformation<br>Officer"]
+            BB["Brian Braren<br>Director, Active IQ<br>Engineering"]
+            AS["Arun Sadagopan<br>Sr Director / Head of<br>Digital & Analytics<br>Strategy"]
+
+            %% James's Team
+            KM["Ken Mencher<br>Sr Director, Tech<br>Lead, Core ONTAP &<br>Performance"]
+            KA["Keith Aasen<br>Principal Product<br>Manager"]
+            CH["Chris Hurley<br>Principal Product<br>Manager"]
+            JH["James Hunter<br>Principal Product<br>Manager"]
+            PS["Parul Sharma<br>Principal Product<br>Manager"]
+            AC3["Andy Chin<br>Principal Product<br>Manager"]
+
+            %% Pranoop's Team
+            SW["Sheryl Weiss<br>Engineering Program Manager"]
+            AC["Amol Chitre<br>Director, SW Engineering"]
+            AT["Atul Pandit<br>Principal Engineer"]
+            TM["Tara Mancini<br>Executive Assistant"]
+            KR["Kalaivani Ramaprabhan<br>Member of Technical Staff"]
+            RC["Rick Cotonello<br>Director, SW Engineering"]
+            AK["Akhil Kaushik<br>Principal Engineer"]
+            PC["Peggy Chang<br>Director, SW Engineering"]
+            VS2["Venkatesan Sethuraman<br>Director, SW Engineering"]
+
+            %% Amol's Team
+            SJ["Satish John<br>Senior Engineer"]
+            VS["Vijay Sripath<br>Principal Engineer"]
+            TG["Tijin George<br>Software Engineer"]
+            MS["Murali Subramanian<br>Senior Engineer"]
+            JV["Jayashree Vankateish<br>Senior Engineering Manager"]
+            NV["Naveen Victor<br>Senior Engineering Manager"]
+            RN["Ramesh Narayanan<br>Senior Engineering Manager"]
+            AK2["Ajith Krishnamurthy<br>MTS Software Engineer"]
+            SA["Salil Aswathi<br>Senior Manager, Engineering"]
+
+            %% Vasanthi's Team
+            AP["Arpit Patel<br>Engineering"]
+            VV["Venkatesh Varadan<br>Senior R&D Eng Manager"]
+            RK["Ravi Kant<br>Principal Engineering Program Manager"]
+            SSr["Sachhin Sreedharan<br>Director, SW Engineering"]
+            AM["Anu Margaly<br>Director, SW Engineering"]
+            NK["Naveen Kumar<br>Engineering Program Manager"]
+            HV["Hemavathy H V<br>Program Manager"]
+            ARa["Abhishek Ramesh<br>Senior Engineering Program Manager"]
+            SG["Sugandha Gupta<br>Engineering"]
+
+            %% Reporting Structure
+            CEO --> DH & BO & MB & CC & HB & HS & SSu & GS
+            HB --> JB & SB & RS & GG & SSi & KV & PT
+            KV --> HW & JW & PE & BF & AB & AN & JK & VR & PI
+            JK --> KM & KA & CH & JH & PS & AC3
+            PE --> SW & AC & AT & TM & KR & RC & AK & PC & VS2
+            AC --> SJ & VS & TG & MS & JV & NV & RN & AK2 & SA
+            VR --> AP & VV & RK & SSr & AM & NK & HV & ARa & SG
+            BF --> MM & RA & MM2 & JD & CD & BB & AS
+
+            %% Styling
+            classDef default fill:#fff,stroke:#0067c5,stroke-width:1.5px,rx:6px,color:#333,font-size:13px
+            classDef ceo fill:#0067c5,stroke:#0067c5,color:#fff,stroke-width:1.5px,rx:6px,font-size:13px
+            class CEO ceo
+        </div>
+    </div>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+</html>
